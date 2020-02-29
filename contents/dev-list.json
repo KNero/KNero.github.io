@@ -1,9 +1,5 @@
 [
   [
-    {"sub": "테스트 페이지1-1", "des": "글 올리기 & 마크다운 테스트1-1","path": "/contents/dev/test.md"},
-    {"sub": "테스트 페이지1-2", "des": "글 올리기 & 마크다운 테스트1-2","path": "/contents/dev/test.md"}
-  ],
-  [
-    {"sub": "테스트 페이지2-1", "des": "글 올리기 & 마크다운 테스트2-1","path": "/contents/dev/test.md"}
+    {"sub": "테스트 페이지", "des": "글 올리기 & 마크다운 테스트","path": "/contents/dev/test.md"}
   ]
 ]
