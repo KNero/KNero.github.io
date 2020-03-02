@@ -30,11 +30,13 @@ knero.github.io/contents/etc-list.json -> 끄적끄적의 글 목록
 ```
 그리고 파일의 형태는 아래처럼 생겼다.
 ```json
-[ // -> 페이지 리스트
-  [ // -> 한 페이지 안의 글 리스트
+[
+  [
     {"sub": "개인 블로그 개발 시작", "des": "시작하게 된 이유. 나의 해결은 reactjs + github","path": "/contents/etc/200301/blog-init.md"}
   ]
 ] 
+// 첫 번째 리스트: 페이지 리스트
+// 두 번째 리스트: 한 페이지 안의 글정보 리스트
 // sub: 제목, des: 간단소개, path: 글 위치
 ```
 
