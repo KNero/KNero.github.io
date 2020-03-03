@@ -23,5 +23,3 @@ Server 나 DB 를 사용하게 되면 지속적으로 관리하는 돈이 들어
 `글을 쓴다. -> 글을 master 에 머지한다. -> json 목록파일에 정보를 입력한다. -> master 에 머지한다.`
  
 이렇게 내가 글을 쓸 수 있는 개인 블로그의 가장 기본틀이 완성되었다.
-
-### [블로그 개발과정 읽으러 가기](https://knero.github.io/#/contents?path=/contents/dev/200302/blog-dev.md)
