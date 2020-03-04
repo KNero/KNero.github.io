@@ -66,7 +66,9 @@ private static async void GetHtmlWaitAsync()
 ```
 싱글 쓰레드 환경에서 멀티쓰레드보다 속도를 올리 수 있는 방법이 ```await``` 이다. ```await```을 만나면 쓰레드는 다음을 실행하지 않고
 해당 메소드를 빠져나오며 이후에 ```await```의 결과가 반환되면 그 신호를 받아 하던 일을 잠시 멈추고 결과를 처리한다.
+
 쓰레드가 Blocking 없이 계속 일하기 때문에 속도가 빠르지만 cpu 의 사용양도 많이 늘어나게 된다.
+
 `1`에서는 ```GetHtmlWaitAsync()``` 안의 ```await``` 부분에서 바로 종료되며 for문이 수행되고 ```GetStringAsync```의 결과가 오면
 ```GetHtmlWaitAsync()``` 안의 ```await``` 다음을 수행하게 된다. 
 `2`에서는 아직 ```await``` 응답을 받지 못했을 수 있기 때문에 응답을 정상적으로 수신해서 ```Interlocked.Increment(ref completeCount)``` 를 통해 카운트가 1000이 될 때 까지 기다린다.
