@@ -73,4 +73,5 @@ private static async void GetHtmlWaitAsync()
 `2`에서는 아직 ```await``` 응답을 받지 못했을 수 있기 때문에 응답을 정상적으로 수신해서 ```Interlocked.Increment(ref completeCount)``` 를 통해 카운트가 1000이 될 때 까지 기다린다.
 
 `await`, `async` 는 사용방법이 조금은 어렵지만 적절한 부분에 사용한다면 효율적인 서버개발을 할 수 있다.
+
 참고: [마이크로소프트 doc](https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model#BKMK_AsyncandAwait)
