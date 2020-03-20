@@ -147,7 +147,7 @@ apt-get install build-essential
 
 이제 BootLoader.asm 파일을 추가해 보자.
 
-**BootLoader.asm
+**BootLoader.asm**
 ```
 [ORG 0x00]  ; 코드의 시작 어드레스를 0x00 으로 설정
 [BITS 16]   ; 이하의 코드는 16비트 코드로 설정
