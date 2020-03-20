@@ -33,7 +33,7 @@
 세그먼트 크기가 64KB 인 이유는 범용레지스터가 모두 16비트 이기 때문인데 16비트로 접근할 수 있는 범위가 0 ~ 65535(0xffff) 이므로 64KB 가 됐다.
 세그먼트에 16을 곱한 위치가 기준 주소가 되고 그 주소부터 최대 64K 까지 이동할 수 있기 때문이다.
 
-![real mode segmentation](//knero.github.io/contents/dev/200313/image/os-study-3-1.png)
+![real mode segmentation](//knero.github.io/contents/dev/2020/03/13/image/os-study-3-1.png)
 
 ### 보호 모드
 
@@ -44,7 +44,7 @@
 
 보호 모드에 세그멘테이션에서 주소를 계산하는 방법은 리얼 모드와 마찬가지로 세그먼트 레지스터의 기준 주소에 범용 레지스터의 값을 더해서 구한다. 또한 보호 모드에서는 리얼 모드와 달리 세그먼트의 크기가 64KB 로 고정되어 있지 않고 지정할 수 있다.
 
-![protect mode segmentation](//knero.github.io/contents/dev/200313/image/os-study-3-2.png)
+![protect mode segmentation](//knero.github.io/contents/dev/2020/03/13/image/os-study-3-2.png)
 
 결과로 나오는 선형 주소는 물리 주소와 일치할 수도, 그렇지 않을 수도 있는데 결과값은 페이징의 입력 값이 되며, 페이징을 사용하지 않는다면 물리 주소와 1:1로 대응한다.
 
