@@ -1,5 +1,5 @@
 [
-  {"sub": "[OS Study] #5 환영문자 출력하기", "des": "화면 버퍼 사용 / 세그먼트 컨트롤","path": "/contents/dev/2020/03/20/os-study-6.md"},
+  {"sub": "[OS Study] #5 환영문자 출력하기", "des": "화면 버퍼 사용 / 세그먼트 컨트롤","path": "/contents/dev/2020/03/24/os-study-6.md"},
   {"sub": "[OS Study] #5 부트로더 만들기", "des": "makefile, qemu를 사용한 OS 이미지 실행","path": "/contents/dev/2020/03/20/os-study-5.md"},
   {"sub": "[OS Study] #4 부팅하기 - 이론", "des": "BIOS / Bootstrap & 0x7C00 / 0x55, 0xAA","path": "/contents/dev/2020/03/16/os-study-4.md"},
   {"sub": "[OS Study] #3 이론 공부 - 2", "des": "운영 모드와 메모리 관리 기법","path": "/contents/dev/2020/03/13/os-study-3.md"},
