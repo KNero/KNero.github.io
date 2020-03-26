@@ -63,8 +63,6 @@ SECTION .txt    ; text 섹션(세그먼트)을 정의
 
 jmp 0x07C0:START    ; CS 세그먼트 레지스터에 0x07C0을 복사하면서 START 레이블로 이동
 
-TOTALSECTORCOUNT: dw 1   ; 부트 로더를 제외한 MINT64 OS 이미지의 크기. 최대 1152 세터 (0x90000byte) 까지 가능
-
 START:
     mov ax, 0x07C0  ; 부트 로더의 시작 어드레스(0x07C0)을 세그먼트 레지스터 값으로 변환
     mov ds, ax      ; DS(데이터 관련 세그먼트 레지스터) 세그먼트 레지스터에 설정
