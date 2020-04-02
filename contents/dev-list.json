@@ -1,4 +1,5 @@
 [
+  {"sub": "[OS Study] #9 가상 리얼모드에서 보호모드로 - 1", "des": "세그먼트 디스크립터 구조/생성","path": "/contents/dev/2020/04/01/os-study-9.md"},
   {"sub": "[OS Study] #8 가상 OS를 부팅해보자", "des": "숫자를 출력하는 가상 OS 만들기","path": "/contents/dev/2020/03/26/os-study-8.md"},
   {"sub": "[C#] 확장 메소드", "des": "null 도 호출할 수 있다.","path": "/contents/dev/2020/03/26/csharp-extension-method.md"},
   {"sub": "[OS Study] #7 플로피 디스크에서 OS 이미지 로딩", "des": "플로피 디스크 읽기 / 함수 만들기","path": "/contents/dev/2020/03/25/os-study-7.md"},
