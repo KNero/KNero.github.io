@@ -126,4 +126,4 @@ clean:
 
 실행을 하면 아래와같이 표시될 것이다. 숫자들의 개수가 1024개임을 확인할 수 있으며 부트로더가 정상적으로 OS 이미지를 로딩했다는 것을 확인할 수 있다.
 
-![virtual os booting](//knero.github.io/contents/dev/2020/03/26/image/os-study-8-1.png)
+![virtual os booting](/contents/dev/2020/03/26/image/os-study-8-1.png)
