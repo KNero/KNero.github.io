@@ -143,7 +143,7 @@ apt-get install build-essential
 
 그리고 실행하면 당연히 **BootLoader.asm**이 없기 때문에 에러가 발생한다. 
 
-![success error bootloader](//knero.github.io/contents/dev/2020/03/20/image/os-study-5-1.png)
+![success error bootloader](/contents/dev/2020/03/20/image/os-study-5-1.png)
 
 이제 BootLoader.asm 파일을 추가해 보자.
 
@@ -185,9 +185,9 @@ db 0xAA ; 1 바이트를 언언하고 값은 0xAA
 
 이제 다시 빌드를 해보면 Disk.img 파일이 생성되는 것을 볼 수 있다.
 
-![success build bootloader](//knero.github.io/contents/dev/2020/03/20/image/os-study-5-2.png)
+![success build bootloader](/contents/dev/2020/03/20/image/os-study-5-2.png)
 
-생성된 이미지를 qemu 를 통해서 실행해보자. (qemu 는 공부 첫 날)[https://knero.github.io/#/contents?path=/contents/dev/2020/03/10/os-study-1.md&date=2020.03.10]에 설치했다.
+생성된 이미지를 qemu 를 통해서 실행해보자. [qemu 는 공부 첫 날](https://knero.github.io/#/contents?path=/contents/dev/2020/03/10/os-study-1.md&date=2020.03.10)에 설치했다.
 
 책의 예제에서는 `-M pc` 사용하여 pc 모드로 실행했지만 지금의 우분투는 그래픽이 없기 때문에 옵션을 바꿔서 실행했다. 그리고 플로피 디스크를 사용하지 않기 때문에 `-fda` 를 `-hda` 변경해 주었다. (-m 64 는 64M 의 메모리를 사용한다는 의미)
 
@@ -200,7 +200,7 @@ qemu-system-x86_64.exe -L . -m 64 -fda c:/MINT64/Disk.img -localtime -M pc
 ```
 qemu-system-x86_64 -L . -m 64 -hda ./Disk.img -localtime -display curses
 ```
-![success booting](//knero.github.io/contents/dev/2020/03/20/image/os-study-5-3.png)
+![success booting](/contents/dev/2020/03/20/image/os-study-5-3.png)
 
 지금 만든 부트로더는 무한 루프를 실행하는 것 말고는 하는 것이 없으므로 멈춰있는 것을 볼 수 있다. 
 만약 부트 로더가 실패하는 것을 보고 싶다면 마지막에 0x55, 0xAA 를 0x00, 0x00 으로 수정해 확인할 수 있다.
