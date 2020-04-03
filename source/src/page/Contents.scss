@@ -1,0 +1,22 @@
+.contents {
+  text-align: right;
+  font-size: 16px;
+  color: black;
+  line-height: 1.5;
+
+  a {
+    font-size: 18px;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  .date {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}

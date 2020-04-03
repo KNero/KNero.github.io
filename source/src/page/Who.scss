@@ -1,0 +1,78 @@
+.who {
+  margin-bottom: 50px;
+  img {
+    width: 250px;
+  }
+
+  .my-info {
+    padding-top: 50px;
+    text-align: left;
+    padding-left: 50px;
+    font-size: 20px;
+
+    .nickname {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .intro {
+      color: #F1A2A6;
+      padding-top: 10px;
+      font-size: 15px;
+    }
+  }
+
+  .url-card {
+    background-color: #273339;
+    color: #F3F7F6;
+    font-size: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px 10px 0 0;
+  }
+  .url-card:hover {
+    background-color: #F1A2A6;
+  }
+
+  .legacy-stack-text {
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  @mixin legacy-stack($backColor) {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    background-color: $backColor;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
+  }
+  .legacy-stack-exof {
+    @include legacy-stack(#3889ED);
+  }
+  .legacy-stack-sqlite {
+    @include legacy-stack(#3B9C8F);
+  }
+  .legacy-stack-etree {
+    @include legacy-stack(#E93B35);
+  }
+  .legacy-stack-jwt {
+    @include legacy-stack(#122736);
+  }
+  .legacy-stack-queue {
+    @include legacy-stack(#783C3D);
+  }
+  .legacy-stack-cell {
+    @include legacy-stack(gray);
+  }
+  .legacy-stack-next {
+    @include legacy-stack(black);
+  }
+  .legacy-stack-os {
+    @include legacy-stack(#336161);
+  }
+}
