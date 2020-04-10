@@ -1,4 +1,6 @@
 [
+  {"sub": "[OS Study] #14 드디어 C Kernel 실행", "des": "감동적인 C코드 OS","path": "/contents/dev/2020/04/10/os-study-14.md"},
+  {"sub": "[OS Study] #13 C Kernel을 위한 준비", "des": "드디어 어셈블리어 탈출인가","path": "/contents/dev/2020/04/08/os-study-13.md"},
   {"sub": "[OS Study] #12 가상 리얼모드에서 보호모드로 - 4", "des": "Switch To Protected Mode Success.","path": "/contents/dev/2020/04/07/os-study-12.md"},
   {"sub": "[OS Study] #11 가상 리얼모드에서 보호모드로 - 3", "des": "GDTR 레지스터 설정","path": "/contents/dev/2020/04/06/os-study-11.md"},
   {"sub": "[OS Study] #10 가상 리얼모드에서 보호모드로 - 2", "des": "GDT 정보 생성","path": "/contents/dev/2020/04/06/os-study-10.md"},
