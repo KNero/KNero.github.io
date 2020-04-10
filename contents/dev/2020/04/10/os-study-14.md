@@ -160,7 +160,9 @@ Kernel32.bin: $(OBJECTDIRECTORY)/EntryPoint.bin $(OBJECTDIRECTORY)/Kernel32.elf.
 TOTALSECTORCOUNT: dw 0x02   ; 부트 로더를 제외한 MINT64 OS 이미지의 크기. 최대 1152 세터 (0x90000byte) 까지 가능
 ```
 몇 가지 오타가 있어서 수정하고 빌드를 하니 `Disk.img`파일이 생성됐고 폴더구조는 아래와 같다.
+
 ![os study directory](/contents/dev/2020/04/10/image/os-study-14-2.png)
 
 실행하니 신기하게도 C로 작성된 OS가 실행됐다.
+
 ![c kernel](/contents/dev/2020/04/10/image/os-study-14-1.png)
