@@ -1,5 +1,7 @@
 # C소스 파일 추가 & 보호 모드 엔트리 포인트 통합
 
+이제 [os-study-13](https://knero.github.io/#/contents?path=/contents/dev/2020/04/08/os-study-13.md&date=2020.04.08&page=1)에서 설명했던 
+내용들을 기반으로 소스를 직접 작성할 것이다. C언어로 개발된 소스를 기존 `EntryPoint.s`에 연결해 보자
 보호 모드 전반에 걸쳐 사용할 공통으로 사용할 헤더 파일을 생성할 것인데 기본 데이터 타입과 자료구조를 정의하는데 사용한다.
 
 **01.Kernel32/Source/Types.h**
@@ -157,7 +159,8 @@ Kernel32.bin: $(OBJECTDIRECTORY)/EntryPoint.bin $(OBJECTDIRECTORY)/Kernel32.elf.
 ```
 TOTALSECTORCOUNT: dw 0x02   ; 부트 로더를 제외한 MINT64 OS 이미지의 크기. 최대 1152 세터 (0x90000byte) 까지 가능
 ```
+몇 가지 오타가 있어서 수정하고 빌드를 하니 `Disk.img`파일이 생성됐고 폴더구조는 아래와 같다.
+![os study directory](/contents/dev/2020/04/10/image/os-study-14-2.png)
 
-몇 가지 오타가 있어서 수정하고 실행하니 신기하게도 C로 작성된 OS가 실행됐다.
-
-![c kernel](/contents/dev/2020/04/09/image/os-study-14-1.png)
+실행하니 신기하게도 C로 작성된 OS가 실행됐다.
+![c kernel](/contents/dev/2020/04/10/image/os-study-14-1.png)
