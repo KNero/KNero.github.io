@@ -210,8 +210,8 @@ Disk.img: 00.BootLoader/BootLoader.bin 01.Kernel32/Temp/Kernel32.bin
 ...생략...
 ```
 
-최상단의 makefile 에서 ImageMaker.exe를 사용하도록 수정했다. 책에서는 exe 파일을 최상단으로 복사해서 사용했지만 생성된 위치에서 그대로 사용하도록 했다.
-make를 실행하면 ImageMaker의 로그를 볼수 있고 정상적으로 부팅되는 것을 볼수 있다.
+최상단의 makefile 에서 ImageMaker.exe를 사용하도록 수정했다. 책에서는 exe 파일을 최상단으로 복사해서 사용했지만 나는 생성된 위치에서 그대로 사용하도록 ImageMaker.exe의 위치를 적어주었다.
+make를 실행하면 ImageMaker의 로그를 볼수 있고 정상적으로 부팅되는 것도 볼수 있다.
 
 ![imagemaker log](/contents/dev/2020/04/14/image/os-study-15-2.png)
 
