@@ -7,7 +7,7 @@
 수정하기 위해서는 `BootLoader.bin`파일의 hex 값을 확인해서 `TOTALSECTORCOUNT`의 위치를 확인해야한다.
 우분투 도커에 접속해서 os가 있는 디렉터리로 이동한 후 `xxd`를 사용하여 파일의 hex 값을 확인해 보자
 
-![bootloader hex](/contents/dev/2020/04/15/image/os-study-15-1.png)
+![bootloader hex](/contents/dev/2020/04/14/image/os-study-15-1.png)
 
 첫 줄의 데이터를 보면
 ```
@@ -213,6 +213,6 @@ Disk.img: 00.BootLoader/BootLoader.bin 01.Kernel32/Temp/Kernel32.bin
 최상단의 makefile 에서 ImageMaker.exe를 사용하도록 수정했다. 책에서는 exe 파일을 최상단으로 복사해서 사용했지만 생성된 위치에서 그대로 사용하도록 했다.
 make를 실행하면 ImageMaker의 로그를 볼수 있고 정상적으로 부팅되는 것을 볼수 있다.
 
-![imagemaker log](/contents/dev/2020/04/15/image/os-study-15-2.png)
+![imagemaker log](/contents/dev/2020/04/14/image/os-study-15-2.png)
 
-![booting success](/contents/dev/2020/04/15/image/os-study-15-3.png)
+![booting success](/contents/dev/2020/04/14/image/os-study-15-3.png)
