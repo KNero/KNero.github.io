@@ -1,4 +1,6 @@
 [
+  {"sub": "[OS Study] #17 USB에서를 사용해서 부팅할 수 있도록 수정하자", "des": "실제 테스트는 스킵했다!","path": "/contents/dev/2020/04/17/os-study-17.md"},
+  {"sub": "[OS Study] #16 IA-32e 모드 커널 메모리 초기화", "des": "IA-32e 모드의 커널 영역을 초기화","path": "/contents/dev/2020/04/17/os-study-16.md"},
   {"sub": "[OS Study] #15 빌드를 자동화 하자", "des": "자동으로 TOTALSECTORCOUNT 수정하자","path": "/contents/dev/2020/04/14/os-study-15.md"},
   {"sub": "[OS Study] #14 드디어 C Kernel 실행", "des": "감동적인 C코드 OS","path": "/contents/dev/2020/04/10/os-study-14.md"},
   {"sub": "[OS Study] #13 C Kernel을 위한 준비", "des": "드디어 어셈블리어 탈출인가","path": "/contents/dev/2020/04/08/os-study-13.md"},
