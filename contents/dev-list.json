@@ -1,5 +1,5 @@
 [
-  {"sub": "[OS Study] #17 사용할 메모리를 모두 검사하고 초기화하자", "des": "부팅 로그가 그럴듯해졌다.","path": "/contents/dev/2020/04/18/os-study-18.md"},
+  {"sub": "[OS Study] #18 사용할 메모리를 모두 검사하고 초기화하자", "des": "부팅 로그가 그럴듯해졌다.","path": "/contents/dev/2020/04/18/os-study-18.md"},
   {"sub": "[OS Study] #17 USB에서를 사용해서 부팅할 수 있도록 수정하자", "des": "실제 테스트는 스킵했다!","path": "/contents/dev/2020/04/17/os-study-17.md"},
   {"sub": "[OS Study] #16 IA-32e 모드 커널 메모리 초기화", "des": "IA-32e 모드의 커널 영역을 초기화","path": "/contents/dev/2020/04/17/os-study-16.md"},
   {"sub": "[OS Study] #15 빌드를 자동화 하자", "des": "자동으로 TOTALSECTORCOUNT 수정하자","path": "/contents/dev/2020/04/14/os-study-15.md"},
