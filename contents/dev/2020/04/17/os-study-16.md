@@ -67,6 +67,7 @@ BOOL kInitializeKernel64Area(void)
 }
 ```
 이제 빌드 후 실행해 보면 아래와 같은 로그를 볼 수 있다.
+
 ![os memory map](/contents/dev/2020/04/17/image/os-study-16-2.png)
 
 나는 해보지 않았지만 책에서는 현재의 이미지를 PC를 부팅할 때 사용하게 되면 리부팅이 된다고 한다.
