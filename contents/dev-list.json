@@ -1,4 +1,5 @@
 [
+  {"sub": "[OS Study] #20 페이지 기능 활성화", "des": "페이징을 사용하여 메모리에 접근하는 방법을 배워보자","path": "/contents/dev/2020/04/22/os-study-20.md"},
   {"sub": "[OS Study] #19 4단계 페이징", "des": "선형주소에서 4단계를 거쳐 물리주소까지","path": "/contents/dev/2020/04/21/os-study-19.md"},
   {"sub": "[OS Study] #18 사용할 메모리를 모두 검사하고 초기화하자", "des": "부팅 로그가 그럴듯해졌다.","path": "/contents/dev/2020/04/18/os-study-18.md"},
   {"sub": "[OS Study] #17 USB에서를 사용해서 부팅할 수 있도록 수정하자", "des": "실제 테스트는 스킵했다!","path": "/contents/dev/2020/04/17/os-study-17.md"},
