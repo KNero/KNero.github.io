@@ -8,7 +8,7 @@
 #ifndef __PAGE_H__
 #define __PAGE_H__
 
-#include "Type.h"
+#include "Types.h"
 
 // 하위 32비트 용 속성 필드
 #define PAGE_FLAGS_P       0x00000001 // Present
