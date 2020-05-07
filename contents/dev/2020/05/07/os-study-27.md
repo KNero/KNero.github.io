@@ -389,4 +389,5 @@ void kCopyKernel64ImageTo2MByte(void)
 ```
 
 이제 전체를 빌드하고 실행해보자!
+
 ![success ia-32e mode](/contents/dev/2020/05/07/image/os-study-27-1.png)
