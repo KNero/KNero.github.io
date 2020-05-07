@@ -43,7 +43,7 @@ MSR 레지스터에 접근하려면 `RDMSR(Read From Model Specific Register)`�
 10비트
 
 - 필드: LMA
-- 일기 전용
+- 읽기 전용
 - Long Model Active의 약자로 현재 동작 중인 모드가 IA-32e 모드인지 여부를 표시
 - 1로 설정되면 프로세서 모드가 IA-32e 모드(호환 모드 또는 64비트 모드)임을 나타내며, 0으로 설정되면 프로세서 모드가 기타 모드임을 나타냄
 
