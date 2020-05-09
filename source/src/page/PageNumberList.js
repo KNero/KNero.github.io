@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import "./PageNumberList.scss";
 
 export default class PageNumberList extends React.Component {
@@ -20,7 +19,32 @@ export default class PageNumberList extends React.Component {
 }
 
 const PageNumber = ({path, index, selected}) => (
-    <Link to={path + "?page=" + index} onClick={() => window.scrollTo({top: 0})}>
+    <a onClick={() => onClickNumber(index)}>
         <span className={selected ? "page-number selected" : "page-number"}>{index}</span>
-    </Link>
+    </a>
 );
+
+const onClickNumber = (page) => {
+    if (window.location.hash.indexOf("?") > -1) {
+        const hash = window.location.hash;
+        const pageStart = hash.indexOf("page=");
+        let pageEnd = hash.length;
+
+        if (pageStart > -1) {
+            for (let i = pageStart; i < hash.length; i++) {
+                if (hash.charAt(i) === "&") {
+                    pageEnd = i;
+                    break;
+                }
+            }
+
+            window.location.hash = hash.split("page=")[0] + "page=" + page + hash.substring(pageEnd);
+        } else {
+            window.location.hash += "&page=" + page;
+        }
+    } else {
+        window.location.hash = "?page=" + page;
+    }
+
+    window.scrollTo({top: 0});
+};
