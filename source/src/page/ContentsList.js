@@ -89,7 +89,7 @@ export default class ContentsList extends React.Component {
 
         if (data) {
             return <ContentsBanner key={"contents" + i}
-                                   subject={(i + 1) + ". " + data.sub}
+                                   subject={(list.length - i) + ". " + data.sub}
                                    description={data.des}
                                    url={data.path}
                                    page={page}/>;
