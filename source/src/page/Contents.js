@@ -19,7 +19,7 @@ export default class Contents extends React.Component {
                     .then(response => response.text())
                     .then(responseText => this.setState({
                         contents: MARKDOWN_CONVERTER.makeHtml(responseText),
-                        date: queryMap.date,
+                        date: Contents.extractDateFromPath(queryMap.path),
                         listUrl: "/" + queryMap.path.split("/")[2] + "?page=" + queryMap.page
                     }));
             }
@@ -34,6 +34,13 @@ export default class Contents extends React.Component {
             query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
         }
         return query;
+    }
+
+    static extractDateFromPath(path) {
+        let pathParts = path.split("/");
+        const arrayLength = pathParts.length;
+
+        return pathParts[arrayLength - 4] + "." + pathParts[arrayLength - 3] + "." + pathParts[arrayLength - 2];
     }
 
     render() {

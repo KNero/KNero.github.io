@@ -7,6 +7,31 @@
   padding-left: 50px;
   z-index: 999;
 
+  .sub-menu {
+    position: absolute;
+    display: none;
+    background-color: #273339;
+    top: 58px;
+
+    div {
+      height: 46px;
+
+      a {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+    div:hover {
+      background-color: #aeaeae;
+      cursor: pointer;
+
+      a {
+        color: #273339;
+        background-color: #aeaeae;
+      }
+    }
+  }
+
   a {
     float: left;
     display: block;
@@ -16,6 +41,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
   }
 
   a:hover {
