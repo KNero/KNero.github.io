@@ -54,7 +54,8 @@ export default class ContentsList extends React.Component {
                         }
                     }
 
-                    this.setState({list: list, totalPage: (originList.length / PAGE_SIZE) + 1, selectedPage: page});
+                    const add = originList.length % PAGE_SIZE > 0 ? 1 : 0;
+                    this.setState({list: list, totalPage: (originList.length / PAGE_SIZE) + add, selectedPage: page});
                 }
             });
     };
