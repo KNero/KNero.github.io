@@ -1,4 +1,6 @@
 [
+  {"sub": "[OS Study] #29 키보드 컨트롤러에서 키 값 읽기, A20 게이트, 키보드 LED", "des": "키보드 키 값 읽기 / A20 게이트 활성화와 프로세스 리셋 / LED 상태 제어","path": "/contents/dev/2020/05/14/os-study-29.md"},
+  {"sub": "[OS Study] #28 키보드 컨트롤러의 구조와 기능", "des": "키보드 데이터 읽기, 쓰기","path": "/contents/dev/2020/05/12/os-study-28.md"},
   {"sub": "[C#] Delegate & Event", "des": "event 안에 delegate 있다.","path": "/contents/dev/2020/05/11/csharp-event-delegate.md"},
   {"sub": "[OS Study] #27 드디어 IA-32e 모드!", "des": "ImageMaker 프로그램 수정, IA-32e 모드 커널 이미지 복사","path": "/contents/dev/2020/05/07/os-study-27.md"},
   {"sub": "[OS Study] #26 IA-32e 모드가자.", "des": "IA-32e 모드용 커널, elf_x86_64.x, makefile 수정","path": "/contents/dev/2020/05/07/os-study-26.md"},
