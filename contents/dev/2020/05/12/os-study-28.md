@@ -179,7 +179,7 @@ BOOL kIsOutputBufferFull(void)
 	return FALSE;
 }
 
-// 입력 버퍼(포트 0x64)에 프로세서가 쓴 데이터가 남아있는지 여부를 반환
+// 입력 버퍼(포트 0x60)에 프로세서가 쓴 데이터가 남아있는지 여부를 반환
 BOOL kIsInputBufferFull(void)
 {
 	// 상태 레지스터(포트 0x64)에서 읽은 값에 입력 버퍼 상태 비트(비트 1)가
@@ -231,7 +231,7 @@ BOOL kActivateKeyboard(void)
 		}
 
 		// 출력 버퍼(포트 0x60)에서 읽은 데이터가 ACK(0xFA)이면 성공
-		if (kInPort(0x60) == 0xFA)
+		if (kInPortByte(0x60) == 0xFA)
 		{
 			return TRUE;
 		}

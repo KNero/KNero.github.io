@@ -14,7 +14,7 @@ typedef struct kKeyMappingEntryStruct
 	BYTE bNormalCode;
 
 	// Shift 키나 Caps Lock 키와 조합된 ASCII 코드
-	BYTE bCombineCode;
+	BYTE bCombinedCode;
 } KEYMAPPINGENTRY;
 ```
 
@@ -258,15 +258,16 @@ BOOL kConvertScanCodeToASCIICode(BYTE bScanCode, BYTE* pbASCIICode, BOOL* pbFlag
 	}
 
 	// 눌러짐 또는 떨어짐 유무 설정
-	if ((bScanCode && 0x80) == 0)
+	if ((bScanCode & 0x80) == 0)
 	{
-		*pbFlags != KEY_FLAGS_DOWN;
+		*pbFlags |= KEY_FLAGS_DOWN;
 	}
 
 	// 조합 키 눌림 또는 떨어짐 상태를 갱신
 	// 현재 입력된 스캔 코드를 이용하여 조합 키 상태와 LED 상태를 갱신하는 함수
 	UpdateCombinationKeyStatusAndLED(bScanCode);
 	return TRUE;
+}
 }
 ```
 

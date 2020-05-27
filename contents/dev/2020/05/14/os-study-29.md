@@ -39,7 +39,7 @@ void kEnableA20Gate(void)
 	int i;
 
 	// 컨트롤 레지스터(포트 0x64)에 키보드 컨트롤러의 출력 포트 값을 읽는 커맨드(0xD0) 전송
-	kOutputByte(0x64, 0xD0);
+	kOutPortByte(0x64, 0xD0);
 
 	//출력 포트의 데이터를 기다렸다가 읽음
 	for (i = 0; i < 0xFFFF; i++)
@@ -55,7 +55,7 @@ void kEnableA20Gate(void)
 	bOutputPortData = kInPortByte(0x60);
 
 	// A20 게이트 비트 설정
-	bOutputPortData != 0x02; // A20 게이트 활성화 비트(비트 1)를 1로 설정, 프로세서를 리셋하려면 bOutputDate=0
+	bOutputPortData |= 0x01; // A20 게이트 활성화 비트(비트 1)를 1로 설정, 프로세서를 리셋하려면 bOutputDate=0
 
 	// 입력 버퍼(포트 0x06)에 데이터가 비어있으면 출력 포트에 값을 쓰는 커맨드와 출력 포트 데이터 전송
 	for (i = 0; i < 0xFFFF; i++)
@@ -68,9 +68,9 @@ void kEnableA20Gate(void)
 	}
 
 	// 커맨드 레지스터(0x64)에 출력 포트 설정 커맨드(0xD1)을 전달
-	kOutputByte(0x64, 0xD1);
+	kOutPortByte(0x64, 0xD1);
 	// 입력 버퍼(0x60)에 A20 게이트 비트가 1로 설정된 값을 전달
-	kOutputByte(0x60, bOutputPortData);
+	kOutPortByte(0x60, bOutputPortData);
 }
 ```
 
@@ -96,7 +96,7 @@ BOOL kChangeKeyboardLED(BOOL bCapsLockOn, BOOL bNumLockOn, BOOL bScrollLockOn)
 		}
 	}
 
-	// 입력 버퍼(포트 0x60)로 LED 상태 변경 커맨드(0xED) 전송
+	// 출력 버퍼(포트 0x60)로 LED 상태 변경 커맨드(0xED) 전송
 	kOutPortByte(0x60, 0xED);
 	for (i = 0; i < 0xFFFF; i++)
 	{
@@ -133,10 +133,10 @@ BOOL kChangeKeyboardLED(BOOL bCapsLockOn, BOOL bNumLockOn, BOOL bScrollLockOn)
 
 	// LED 변경 값을 키보드로 전송하고 데이터가 처리가 완료될 때까지 대기
 	// 해당 비트의 위치로 옮긴 후 OR 연산하여 한 번에 처리할 수 있게 함
-	kOutPortByte(0x60, (bCapsLockOn << 2) | (bNumLockOn << 1) || bScrollLockOn);
+	kOutPortByte(0x60, (bCapsLockOn << 2) | (bNumLockOn << 1) | bScrollLockOn);
 	for (i = 0; i < 0xFFFF; i++)
 	{
-		// 입력 버퍼(포트 0x60)가 비어 있으며 키보드가 LED 데이터를 가져간 것임
+		// 입력 버퍼(포트 0x60)가 비어 있으 키보드가 LED 데이터를 가져간 것임
 		if (kIsInputBufferFull() == FALSE)
 		{
 			break;
