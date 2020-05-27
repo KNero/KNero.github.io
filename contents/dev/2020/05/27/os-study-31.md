@@ -2,13 +2,13 @@
 
 앞서 배운 키보드의 내용들을 OS 에 적용해보자. (키보드 디바이스 드라이버와 간단한 셸 추가)
 
-**키보드 디바이스 드라이버 소스 파일(02.Kernel64/Source/Keyboard.c)**
+**키보드 디바이스 드라이버 소스 파일**
 
-https://github.com/KNero/os-study/blob/master/02.Kernel64/Source/Keyboard.c
+[02.Kernel64/Source/Keyboard.c](https://github.com/KNero/os-study/blob/master/02.Kernel64/Source/Keyboard.c)
 
-**키보드 디바이스 드라이버 헤더 파일(02.Kernel64/Source/Keyboard.h)**
+**키보드 디바이스 드라이버 헤더 파일**
 
-https://github.com/KNero/os-study/blob/master/02.Kernel64/Source/Keyboard.h
+[02.Kernel64/Source/Keyboard.h](https://github.com/KNero/os-study/blob/master/02.Kernel64/Source/Keyboard.h)
 
 이제 `kInPortByte()`, `kOutPortByte()` 함수는 어셈블리어 명령인 `in`과 `out`을 호출하는 어셈블리어 함수이므로 어셈블리어 함수가 정의된 오브젝트 파일이 필요하다.
 앞으로도 여러 번 어셈블리어를 사용할 것이기 때문에 `AssemblyUtility.asm`, `AssemblyUtility.h` 파일을 생성하여 어셈블리어 함수를 추가하는 용도로 사용할 것이다.
