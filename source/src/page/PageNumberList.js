@@ -45,6 +45,4 @@ const onClickNumber = (page) => {
     } else {
         window.location.hash = "?page=" + page;
     }
-
-    window.scrollTo({top: 0});
 };
