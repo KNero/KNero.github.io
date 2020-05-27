@@ -89,11 +89,18 @@ export default class ContentsList extends React.Component {
         const data = list[i];
 
         if (data) {
+            let query = "";
+            if (window.location.hash.indexOf("?") > -1) {
+                const hash = window.location.hash;
+                query = hash.split("?")[1];
+            }
+
             return <ContentsBanner key={"contents" + i}
                                    subject={(list.length - i) + ". " + data.sub}
                                    description={data.des}
                                    url={data.path}
-                                   page={page}/>;
+                                   page={page}
+                                   query={query}/>;
         } else {
             return null;
         }

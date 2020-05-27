@@ -14,13 +14,14 @@ export default class Contents extends React.Component {
     componentDidMount() {
         if (this.props.location.search) {
             let queryMap = Contents.parseQuery(this.props.location.search);
+
             if (queryMap.path) {
                 fetch(queryMap.path)
                     .then(response => response.text())
                     .then(responseText => this.setState({
                         contents: MARKDOWN_CONVERTER.makeHtml(responseText),
                         date: Contents.extractDateFromPath(queryMap.path),
-                        listUrl: "/" + queryMap.path.split("/")[2] + "?page=" + queryMap.page
+                        listUrl: "/" + queryMap.path.split("/")[2] + "?" + this.props.location.search.split(queryMap.path + "&")[1]
                     }));
             }
         }
