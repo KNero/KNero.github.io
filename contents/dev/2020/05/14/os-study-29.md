@@ -29,7 +29,7 @@ BYTE kGetKeyboardScanCode(void)
 A20 게이트 비트와 프로세서 리셋 비트는 출력 포트의 비트 1과 비트 0에 있다. 그리고 키보드 컨트롤러의 출력 포트는 0xD0, 0xD1 커맨드로 접근할 수 있다.
 A20 게이트를 활성화하는 방법과 프로세서를 리셋하는 방법은 출력 포트의 데이터를 0으로 설정하는 것만 다를 뿐, 나머지 코드는 같으므로 A20 게이트를 활성화하는 코드만 보자.
 
-참고: [[OS Study] 키보드 컨트롤러의 구조와 기능](https://knero.github.io/#/contents?path=/contents/dev/2020/05/12/os-study-28.md&page=1)
+참고: [[OS Study] 키보드 컨트롤러의 구조와 기능](https://knero.github.io/#/contents?path=/contents/dev/2020/05/12/os-study-28.md&page=1){:target="_blank"}
 
 **키보드 컨트롤러를 통해 A20 게이트를 활성화하는 코드**
 ```
