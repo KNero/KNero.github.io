@@ -2,7 +2,7 @@
 
 IA-32e 모드의 세그먼트 디스크립터는 보호 모드의 세그먼트 디스크립터와 거의 같은 크기와 필드로 구성되어 있기 때문에 코드 디스크립터와 데이터 디스크립터를 생성하는 방법이 보호 모드와 유사하다.
 하지만 IA-32e 모드에서는 디스크립터의 기준 주소와 세그먼트 크기 값에 상관없이 64GB 전체 영역으로 설정된다는 것과 세그먼트 디스크립터의 L비트가 IA-32e 서브 모드 중 호환 모드 또는 64 비트 모드를
-선택하는 데 사용된다는 차이점이 있다. ([보호 모드 세그먼트 디스크립터](https://knero.github.io/#/contents?path=/contents/dev/2020/04/01/os-study-9.md&date=2020.04.01&page=2))
+선택하는 데 사용된다는 차이점이 있다. ([보호 모드 세그먼트 디스크립터](https://knero.github.io/#/contents?path=/contents/dev/2020/04/01/os-study-9.md&date=2020.04.01&page=2){:target="_blank"})
 
 ![IA-32e segment descriptor](/contents/dev/2020/04/27/image/os-study-23-1.png)
 
