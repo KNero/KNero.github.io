@@ -1,7 +1,6 @@
 # 운영 모드와 메모리 관리 기법
 
-이전 글인 [**운영 모드와 레지스터**](https://knero.github.io/#/contents?path=/contents/dev/2020/03/12/os-study-2.md){:target="_blank"} 보다 이번에 다룰 메모리 관리 기법은 내용이 너무 많은 관계로 최대한 축약해서 정리하려고 한다. 
-**운영 모드와 레지스터**도 너무 많이 줄여서 글을 보면서 공부하기는 어렵고 검색하거나 책을 추가로 봐야 하지만 메모리 관리 기법은 더 어려울 듯 싶다.
+이전 글인 <a href="https://knero.github.io/#/contents?path=/contents/dev/2020/03/12/os-study-2.md" target="blank">운영 모드와 레지스터</a>도 너무 많이 줄여서 글을 보면서 공부하기는 어렵고 검색하거나 책을 추가로 봐야 하지만 메모리 관리 기법은 더 어려울 듯 싶다.
 
 ## Segmentation & Paging
 

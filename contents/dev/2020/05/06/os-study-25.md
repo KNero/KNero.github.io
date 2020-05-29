@@ -3,7 +3,7 @@
 이제 보호 모드에서 IA-32e 모드로 전환하기 위해 코드를 작성할 것이다. IA-32e 모드 커널을 추가하려면 많은 부분을 수정해야 하므로 보호 모드 커널을 정리하고 IA-32e 모드 커널로 넘어 가겠다.
 우선 CPUID 명령어 및 IA-32e 모드 전환 관련된 어셈블리어 코드를 하나의 파일로 합치는 것을 시작하자.
 
-아래 코드는 [IA-32e 지원 여부 검사](https://knero.github.io/#/contents?path=/contents/dev/2020/04/24/os-study-22.md){:target="_blank"} 참고
+아래 코드는 <a href="https://knero.github.io/#/contents?path=/contents/dev/2020/04/24/os-study-22.md" target="blank">IA-32e 지원 여부 검사</a> 참고
 
 **IA-32e 모드 전환에 관련된 어셈블리어 소스 코드(01.Kernel32/Source/ModeSwitch.asm 생성)**
 ```

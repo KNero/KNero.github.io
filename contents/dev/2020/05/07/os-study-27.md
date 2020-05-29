@@ -201,7 +201,7 @@ int CopyFile(int iSourceFd, int iTargetFd)
 ```
 
 이렇게 수정을 하고 빌드해서 `ImageMaker.exe` 파일을 생성해보자.
-(makefile을 생성해 두었기 때문에 make 를 실행했다. 참고: [커널 빌드 자동화](https://knero.github.io/#/contents?path=/contents/dev/2020/04/14/os-study-15.md){:target="_blank"})
+(makefile을 생성해 두었기 때문에 make 를 실행했다. 참고: <a href="https://knero.github.io/#/contents?path=/contents/dev/2020/04/14/os-study-15.md" target="blank">커널 빌드 자동화</a>)
 
 # IA-32e 모드 커널 이미지 복사
 

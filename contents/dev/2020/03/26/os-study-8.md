@@ -7,7 +7,7 @@
 1024 섹터나 되는 코드를 작성하기에는 어려움이 있기 때문에 NASM 의 전처리기(PreProcessor)를 사용할 것이다.
 이 전처리기는 매크로(Macro), 조건(Condition), 반복(Loop) 구문을 지원하며, 변수 할당과 값 지정도 가능하다.
 
-그럼 이제 앞장의 [디렉토리 구조](https://knero.github.io/#/contents?path=/contents/dev/2020/03/20/os-study-5.md){:target="_blank"} 에서 `01.Kernel32/Source` 디렉터리에 가상 OS 소스파일로 사용할 VirtualOS.asm 파일을 생성하겠다.
+그럼 이제 앞장의 <a href="https://knero.github.io/#/contents?path=/contents/dev/2020/03/20/os-study-5.md" target="blank">디렉토리 구조</a>에서 `01.Kernel32/Source` 디렉터리에 가상 OS 소스파일로 사용할 VirtualOS.asm 파일을 생성하겠다.
 
 #### VirtualOS.asm
 ```
