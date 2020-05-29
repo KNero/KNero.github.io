@@ -45,7 +45,7 @@
 
 64GB 물리 메모리를 매핑하는데 필요한 페이지 테이블의 개수가 총 66개이며, 총 264KB가 필요하다는 것을 알았다.
 
-[IA-32e 모드 커널 메모리 초기화](https://knero.github.io/#/contents?path=/contents/dev/2020/04/17/os-study-16.md&date=2020.04.17&page=1){:target="_blank"}에서 본 것과 같이 1MB부터 2MB까지는 IA-32e 모드용 자료구조 영역으로 사용하고 2MB부터 커널용 이미지가 저장되게 된다. 
+[IA-32e 모드 커널 메모리 초기화](https://knero.github.io/#/contents?path=/contents/dev/2020/04/17/os-study-16.md){:target="_blank"} 에서 본 것과 같이 1MB부터 2MB까지는 IA-32e 모드용 자료구조 영역으로 사용하고 2MB부터 커널용 이미지가 저장되게 된다. 
 자료구조 영역에 방금 공부한 페이지 테이블들이 자리잡을 것이고 페이지 테이블의 순서는 PML4 테이블부터 페이지 디렉터리 포인터 테이블, 페이지 디렉터리의 순서이며 
 0x100000(1MB) ~ 0x142000(1MB + 264KB)에 위치한다.
 

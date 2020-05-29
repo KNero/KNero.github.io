@@ -1,6 +1,6 @@
 # C소스 파일 추가 & 보호 모드 엔트리 포인트 통합
 
-이제 [os-study-13](https://knero.github.io/#/contents?path=/contents/dev/2020/04/08/os-study-13.md&date=2020.04.08&page=1){:target="_blank"} 에서 설명했던 내용들을 기반으로 소스를 직접 작성할 것이다. C언어로 개발된 소스를 기존 `EntryPoint.s`에 연결해 보자
+이제 [os-study-13](https://knero.github.io/#/contents?path=/contents/dev/2020/04/08/os-study-13.md){:target="_blank"} 에서 설명했던 내용들을 기반으로 소스를 직접 작성할 것이다. C언어로 개발된 소스를 기존 `EntryPoint.s`에 연결해 보자
 보호 모드 전반에 걸쳐 사용할 공통으로 사용할 헤더 파일을 생성할 것인데 기본 데이터 타입과 자료구조를 정의하는데 사용한다.
 
 **01.Kernel32/Source/Types.h**

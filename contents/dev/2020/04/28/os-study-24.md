@@ -5,7 +5,7 @@
 물리 메모리 확장(PAE, Physical Address Extension) 기능은 CR4 레지스터의 PAE 비트(비트 5)가 담당하고 있으며, PAE 비트를 1로 설정해서 물리 메모리 확장 기능을 사용할 수 있다.
 그리고 프로세서에 페이지 테이블을 설정하려면 CR3 레지스터에 PML4 테이블의 어드레스를 저장하면 된다.
 
-관련 설명은 [페이지 테이블 생성과 페이징 기능 활성화](https://knero.github.io/#/contents?path=/contents/dev/2020/04/22/os-study-20.md&date=2020.04.22&page=1){:target="_blank"}의 내용에 나와있으며 맨 하단의 **프로세서의 페이징 기능을 활성화하는 코드** 에 구현되어 있다.
+관련 설명은 [페이지 테이블 생성과 페이징 기능 활성화](https://knero.github.io/#/contents?path=/contents/dev/2020/04/22/os-study-20.md){:target="_blank"} 의 내용에 나와있으며 맨 하단의 **프로세서의 페이징 기능을 활성화하는 코드** 에 구현되어 있다.
 
 IA-32e 모드를 활성화하기 위해서는 `IA32_EFER` 레지스터의 LME 비트를 1로 설정하는 것이다. 이를 하지 않으면 IA-32e 모드용 세그먼트 레지스터로 교체한다 해도 32비트 보호 모드로 동작하게 된다.
 `IA32_EFER`은 범용 또는 컨트롤 레지스터가 아니며, MSR(Model-Sepcific Register)라고 불리는 특수한 용도의 레지스터이다. 

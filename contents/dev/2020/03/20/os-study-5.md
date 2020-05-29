@@ -187,7 +187,7 @@ db 0xAA ; 1 바이트를 언언하고 값은 0xAA
 
 ![success build bootloader](/contents/dev/2020/03/20/image/os-study-5-2.png)
 
-생성된 이미지를 qemu 를 통해서 실행해보자. [qemu 는 공부 첫 날](https://knero.github.io/#/contents?path=/contents/dev/2020/03/10/os-study-1.md&date=2020.03.10){:target="_blank"}에 설치했다.
+생성된 이미지를 qemu 를 통해서 실행해보자. [qemu 는 공부 첫 날](https://knero.github.io/#/contents?path=/contents/dev/2020/03/10/os-study-1.md){:target="_blank"} 에 설치했다.
 
 책의 예제에서는 `-M pc` 사용하여 pc 모드로 실행했지만 지금의 우분투는 그래픽이 없기 때문에 옵션을 바꿔서 실행했다. 그리고 플로피 디스크를 사용하지 않기 때문에 `-fda` 를 `-hda` 변경해 주었다. (-m 64 는 64M 의 메모리를 사용한다는 의미)
 
