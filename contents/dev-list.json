@@ -1,4 +1,5 @@
 [
+  {"sub": "[Algorithm] 버블정렬(Bubble Sort)", "des": "하나씩 하나씩 느릿느릿","path": "/contents/dev/2020/12/14/algor-bubble-sort.md"},
   {"sub": "[Algorithm] 선택정렬(Selection Sort)", "des": "가장 작은 값을 찾아서 바꿔주자","path": "/contents/dev/2020/12/14/algor-selection-sort.md"},
   {"sub": "[OS Study] #34 IDT 테이블 생성, 인터럽트, 예외 핸들러 등록", "des": "IDT 테이블, 인터럽트, 예외 핸들러","path": "/contents/dev/2020/07/15/os-study-34.md"},
   {"sub": "[OS Study] #33 GDT 테이블에 TSS 세그먼트를 추가하자", "des": "GDT 테이블, TSS 세그먼트","path": "/contents/dev/2020/07/14/os-study-33.md"},
