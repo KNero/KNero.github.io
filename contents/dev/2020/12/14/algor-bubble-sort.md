@@ -20,6 +20,7 @@ public class BubbleSort {
                     num[k + 1] = t;
                 }
             }
+            
             for (int n : num)
             {
                 System.out.print(n + " ");
