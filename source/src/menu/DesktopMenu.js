@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 import './DesktopMenu.scss';
 
@@ -36,6 +37,10 @@ export default class DesktopMenu extends React.Component {
         </div>;
     }
 }
+
+DesktopMenu.propTypes = {
+    menuPath: PropTypes.string,
+};
 
 const onClickDev = () => {
     const display = document.getElementById("dev-menu").style.display;

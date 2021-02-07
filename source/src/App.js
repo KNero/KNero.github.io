@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <DesktopMenu menuPath={"/contents/dev-menu.json"}/>
+                <DesktopMenu menuPath="/contents/dev-menu.json"/>
                 <div className="container">
                     <Route exact path="/" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
                     <Route path="/dev" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
