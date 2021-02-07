@@ -1,0 +1,14 @@
+npm run-script build;
+cd ..;
+rm -rf static;
+rm *.json;
+rm *.html;
+rm knero-1.png;
+rm *.js;
+rm robots.txt;
+cp -r source/build/static ./;
+cp source/build/*.json ./;
+cp source/build/*.html ./;
+cp source/build/knero-1.png ./;
+cp source/build/*.js ./;
+cp source/build/robots.txt ./;
