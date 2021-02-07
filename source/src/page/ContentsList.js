@@ -36,6 +36,7 @@ export default class ContentsList extends React.Component {
             page = 1;
         }
 
+        console.log(this.props.listPath);
         fetch(this.props.listPath)
             .then(response => response.json())
             .then(responseJson => {
