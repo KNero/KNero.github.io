@@ -2,26 +2,39 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './DesktopMenu.scss';
 
-export const DesktopMenu = () => (
-    <div className="desktop-menu">
-        <div>
-            <a onClick={onClickDev}>개발</a>
-            <div id="dev-menu" className="sub-menu" onClick={closeSubMenu}>
-                <div>
-                    <Link to="/dev">전체</Link>
-                </div>
-                <div>
-                    <Link to="/dev?c=os">OS Study</Link>
-                </div>
-                <div>
-                    <Link to="/dev?c=cs">C#</Link>
+export default class DesktopMenu extends React.Component {
+    state = {menu: []};
+
+    componentDidMount() {
+        fetch(this.props.path)
+            .then(response => response.json())
+            .then(responseJson => {
+                let menuList = [];
+                responseJson.forEach(menu => {
+                    menuList.push(
+                        <div key={menu.path}>
+                            <Link to={menu.path}>{menu.name}</Link>
+                        </div>
+                    );
+                });
+
+                this.setState({menu: menuList});
+            });
+    }
+
+    render() {
+        return <div className="desktop-menu">
+            <div>
+                <a onClick={onClickDev}>dev</a>
+                <div id="dev-menu" className="sub-menu" onClick={closeSubMenu}>
+                    {this.state.menu}
                 </div>
             </div>
-        </div>
-        <Link to="/etc" onClick={closeSubMenu}>끄적끄적</Link>
-        <Link to="/who" onClick={closeSubMenu}>Nero is</Link>
-    </div>
-);
+            <Link to="/etc" onClick={closeSubMenu}>etc</Link>
+            <Link to="/who" onClick={closeSubMenu}>profile</Link>
+        </div>;
+    }
+}
 
 const onClickDev = () => {
     const display = document.getElementById("dev-menu").style.display;

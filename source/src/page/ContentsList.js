@@ -40,7 +40,7 @@ export default class ContentsList extends React.Component {
             .then(response => response.json())
             .then(responseJson => {
                 if (responseJson.length > 0) {
-                    let originList = this.filterContents((responseJson));
+                    let originList = this.filterContents(responseJson);
 
                     let list = [];
 
@@ -64,7 +64,10 @@ export default class ContentsList extends React.Component {
         const result = [];
 
         allContents.forEach(row => {
-            let isOk = this.filterCategory(row);
+            let isOk = true;
+            if (this.queryStringMap.f) {
+                isOk = row.sub.startsWith(this.queryStringMap.f);
+            }
 
             if (isOk) {
                 result.push(row);
@@ -72,17 +75,6 @@ export default class ContentsList extends React.Component {
         });
 
         return result;
-    };
-
-    filterCategory = (contents) => {
-        switch (this.queryStringMap.c) {
-            case "os":
-                return contents.sub.startsWith("[OS Study]");
-            case "cs":
-                return contents.sub.startsWith("[C#]");
-        }
-
-        return true;
     };
 
     static createContentsBanner(list, i, page) {
