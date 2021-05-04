@@ -1,6 +1,7 @@
 [
   {"name": "전체", "path": "/dev"},
   {"name": "OS Study", "path": "/dev?f=[OS Study]"},
+  {"name": "Kafka", "path": "/dev?f=[Kafka]"},
   {"name": "C#", "path": "/dev?f=[C#]"},
   {"name": "Java", "path": "/dev?f=[Java]"}
 ]
