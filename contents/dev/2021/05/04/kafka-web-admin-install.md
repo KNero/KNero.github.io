@@ -1,5 +1,5 @@
 주키퍼와 카프카를 설치하고 클라이언트에서 접속해 보기 전에 카프카를 편하게 관리하기 위해서 Web Admin 을 설치해 보자.
-오픈소스 중에서 가장 최근까지 관리가 되는 것을 찾아보다 보니 **kafdrop** 을 찾을 수 있었다. (https://github.com/obsidiandynamics/kafdrop)
+오픈소스 중에서 가장 최근까지 관리가 되는 것을 찾아보다 보니 (**kafdrop**)[https://github.com/obsidiandynamics/kafdrop] 을 찾을 수 있었다.
 
 README의 사용법 중에서 jar 를 사용하는 방법을 사용할 것이고 빌드를 위해서 압축파일을 다운 받았다. 압축을 풀고 IntelliJ 를 통해 프로젝트를 열어보자.
 (처음에는 빌드를 하지 않기 때문에 `target` 폴더는 보이지 않는다.)
