@@ -139,5 +139,5 @@ initLimit=5
 syncLimit=10
 ```
 
-주키퍼가이드: https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html
-설정 정보 블로그: https://sungwookkang.com/1433
+주키퍼가이드: (https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html)[https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html]
+설정 정보 블로그: (https://sungwookkang.com/1433)[https://sungwookkang.com/1433]
