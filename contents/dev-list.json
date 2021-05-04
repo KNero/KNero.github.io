@@ -1,5 +1,6 @@
 [
-  {"sub": "[Kafka] 1.Zookeeper 설치", "des": "카프카의 시작. 주키퍼 설치하기.","path": "/contents/dev/2021/05/04/kafka-install-zookeeper.md"},
+  {"sub": "[Kafka] 2.Kafka 설치", "des": "3대 카프카를 설치하자","path": "/contents/dev/2021/05/04/kafka-install.md"},
+  {"sub": "[Kafka] 1.Zookeeper 설치", "des": "카프카의 시작. 주키퍼 3대 설치하기.","path": "/contents/dev/2021/05/04/kafka-install-zookeeper.md"},
   {"sub": "[Java] 객체 공유", "des": "volatile, ThreadLocal, 스레드한정, 스택한정, 불변","path": "/contents/dev/2021/02/02/java-concurrency-1.md"},
   {"sub": "[Algorithm] 삽입정렬(Insertion Sort)", "des": "앞은 모두 정렬됐겠지","path": "/contents/dev/2020/12/14/algor-insertion-sort.md"},
   {"sub": "[Algorithm] 버블정렬(Bubble Sort)", "des": "하나씩 하나씩 느릿느릿","path": "/contents/dev/2020/12/14/algor-bubble-sort.md"},
