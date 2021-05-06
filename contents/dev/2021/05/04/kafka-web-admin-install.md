@@ -45,7 +45,7 @@ zookeeper.connect=localhost:2181,localhost:2182,localhost:2183/kafka02_znode
 # D:\kafka\kafka_2.13-2.8.0-3\config\server.properties
 zookeeper.connect=localhost:2181,localhost:2182,localhost:2183/kafka03_znode
 ```
-위 설정이 기존 설정인데 맨 마지막에 `kafka0x_znode` 이 부분을 모두 같게 설정해야지 클러스터링으로 묶이게 된다.(ip:port 만 설정하면 주키퍼의 root(`/`) 를 사용하게 되는데 관리상 좋지 않기 때문에 지정해 주는 것이 좋다.)
+위 설정이 기존 설정인데 맨 마지막에 `kafka0x_znode` 이 부분을 모두 같게 설정해야만 클러스터링으로 묶이게 된다.(ip:port 만 설정하면 주키퍼의 root(`/`) 를 사용하게 되는데 관리상 좋지 않기 때문에 지정해 주는 것이 좋다.)
 나는 모두 `kafka01_znode` 로 설정해주고 재기동을 해주니 어드민에서 모든 노드가 보이게 되었다. 
 
 ![kafdrop7](/contents/dev/2021/05/04/image/kafdrop-7.png)
