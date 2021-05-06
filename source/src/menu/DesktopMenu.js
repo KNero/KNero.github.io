@@ -12,29 +12,23 @@ export default class DesktopMenu extends React.Component {
             .then(response => response.json())
             .then(responseJson => {
                 let menuList = [];
-                responseJson.forEach(menu => {
-                    menuList.push(
-                        <div key={menu.path}>
-                            <Link to={menu.path}>{menu.name}</Link>
-                        </div>
-                    );
-                });
+                responseJson.forEach(menu => menuList.push(<Link key={menu.path} to={menu.path} onClick={closeNav}>{menu.name}</Link>));
 
                 this.setState({menu: menuList});
             });
     }
 
     render() {
-        return <div className="desktop-menu">
-            <div>
-                <a onClick={onClickDev}>dev</a>
-                <div id="dev-menu" className="sub-menu" onClick={closeSubMenu}>
+        return (
+            <div className="desktop-menu">
+                <div className="show-nav" onClick={openNav}>&#9776;</div>
+                <div id="mySidenav" className="sidenav">
+                    <a className="closebtn" onClick={closeNav}>&times;</a>
                     {this.state.menu}
+                    <Link to="/who" onClick={closeNav}>profile</Link>
                 </div>
             </div>
-            <Link to="/etc" onClick={closeSubMenu}>etc</Link>
-            <Link to="/who" onClick={closeSubMenu}>profile</Link>
-        </div>;
+        );
     }
 }
 
@@ -42,15 +36,10 @@ DesktopMenu.propTypes = {
     menuPath: PropTypes.string,
 };
 
-const onClickDev = () => {
-    const display = document.getElementById("dev-menu").style.display;
-    if (!display || display === "none") {
-        document.getElementById("dev-menu").style.display = "block";
-    } else {
-        document.getElementById("dev-menu").style.display = "none";
-    }
-};
+function openNav() {
+    document.getElementById("mySidenav").style.width = "180px";
+}
 
-const closeSubMenu = () => {
-    document.getElementById("dev-menu").style.display = "none";
-};
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}

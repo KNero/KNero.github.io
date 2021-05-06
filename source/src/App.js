@@ -11,12 +11,14 @@ function App() {
         <div className="App">
             <Router>
                 <DesktopMenu menuPath="/contents/dev-menu.json"/>
-                <div className="container">
-                    <Route exact path="/" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
-                    <Route path="/dev" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
-                    <Route path="/etc" render={() => <ContentsList basicPath="/etc" listPath="/contents/etc-list.json"/>}/>
-                    <Route path="/who" component={Who}/>
-                    <Route path="/contents" component={Contents}/>
+                <div id="main">
+                    <div className="container">
+                        <Route exact path="/" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
+                        <Route path="/dev" render={() => <ContentsList basicPath="/dev" listPath="/contents/dev-list.json"/>}/>
+                        <Route path="/etc" render={() => <ContentsList basicPath="/etc" listPath="/contents/etc-list.json"/>}/>
+                        <Route path="/who" component={Who}/>
+                        <Route path="/contents" component={Contents}/>
+                    </div>
                 </div>
             </Router>
         </div>
