@@ -1,4 +1,5 @@
 Consumer 의 다른 Config 는 차후에 정리하고 우선 Producer 로 저장한 메시지를 꺼내보자.
+
 ```java
 import kafka.ContextValue;
 import org.apache.kafka.clients.consumer.*;
@@ -42,6 +43,7 @@ public class ConsumerTest {
 }
 
 ```
+
 카프카는 Consumer Group 을 기준으로 offset 관리를 한다는 점이 중요하다. 같은 Group 에 속해 있을 경우 그 group의 consumer들은 같은 offset의 메시지를 가져가지 않고 분배된다.
 [Consumer Group 설명 블로그](https://jhleed.tistory.com/180#:~:text=%EC%BB%A8%EC%8A%88%EB%A8%B8%20%EA%B7%B8%EB%A3%B9(Consumer%20Group)%20%EC%9D%B4%EB%9E%80,%EB%AC%B6%EB%8A%94%20%EB%85%BC%EB%A6%AC%EC%A0%81%20%EA%B7%B8%EB%A3%B9%20%EB%8B%A8%EC%9C%84%EC%9D%B4%EB%8B%A4.)
 
