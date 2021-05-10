@@ -240,7 +240,7 @@ kafka-consumer-consumer-group-1-0: message count: 1
 ConsumerRecord(topic = test-topic-1, partition = 0, leaderEpoch = 0, offset = 28, CreateTime = 1620627285264, serialized key size = 36, serialized value size = 53, headers = RecordHeaders(headers = [], isReadOnly = false), key = 75f58c70-988e-430e-b259-e25f304ee01c, value = perfect message. 75f58c70-988e-430e-b259-e25f304ee01c)
 ```
 `kafka-consumer-consumer-group-1-0` 이 로그의 마지막에 `0`이 thread 의 index 인데 하나의 thread 만 처리하는 것을 볼 수 있다.
-topic 의 offset은 그룹별로 관리가 되지만 partition 은 consumer 별로 따로가져가기 때문이다.(현재 사용 중인 topic 은 partition 이 1이다.)
+topic 의 offset은 그룹별로 관리가 되지만 partition 은 consumer 별로 따로 가져가기 때문이다.(현재 사용 중인 topic 은 partition 이 1이다.)
 partition 을 3으로 설정해서 새로운 topic 을 생성하게 되면 이제 group 안의 각 consumer 들에게 하나씩 배분된다. (`consumerSize` 를 3으로 해서 생성했기 때문에)
 
 하지만 이대로 실행하게 되면 여전히 하나의 thread 만 처리하게 되는데 이유는 producer 에서 하나의 partition 에만 메시지를 저장하고 있기 때문에이다.
@@ -266,6 +266,11 @@ kafka-consumer-consumer-group-2-0: message count: 1
 ```
 `kafka-consumer-consumer-group-2-1` 이 부분을 보면 0, 1, 2 모두 실행되는 것을 볼 수 있고 web admin 에서도 2번 partition만 사용되다가 1, 2도 사용된 것을 볼 수 있다.
 
+![web admin](/contents/dev/2021/05/10/image/test-1.png)
 
-
-
+** 지금까지 알게된 비지니스에 맞게 조절해야 하는 요소**
+- consumer group 안에 consumer 개수
+- topic 의 partition 개수
+- producer 의 partition 배분 전략
+- commit 사용 방법
+- 재처리
