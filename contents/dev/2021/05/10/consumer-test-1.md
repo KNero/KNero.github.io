@@ -264,7 +264,7 @@ kafka-consumer-consumer-group-2-2: message count: 1
 ConsumerRecord(topic = test-topic-2, partition = 2, leaderEpoch = 0, offset = 1, CreateTime = 1620629988846, serialized key size = 36, serialized value size = 53, headers = RecordHeaders(headers = [], isReadOnly = false), key = df53e2bf-2afc-4ff0-a28c-19a561be37be, value = perfect message. df53e2bf-2afc-4ff0-a28c-19a561be37be)
 kafka-consumer-consumer-group-2-0: message count: 1
 ```
-`kafka-consumer-consumer-group-2-1` 이 부분을 보면 0, 1, 2 모두 실행되는 것을 볼 수 있고 web admin 에서도 2번 partition만 사용되다가 1, 2도 사용된 것을 볼 수 있다.
+`kafka-consumer-consumer-group-2-1` 이 부분을 보면 0, 1, 2 모두 실행되는 것을 볼 수 있고 web admin 의 맨 하단을 보면 2번 partition만 사용되다가 1, 2도 사용된 것을 볼 수 있다.
 
 ![web admin](/contents/dev/2021/05/10/image/test-1.png)
 
