@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /#/dev
-Allow: /#/contents
+Allow: /#/contents?path=/contents
