@@ -4,6 +4,8 @@ object-assign
 @license MIT
 */
 
+/*! https://mths.be/he v1.2.0 by @mathias | MIT license */
+
 /*! showdown v 1.9.1 - 02-11-2019 */
 
 /** @license React v0.18.0

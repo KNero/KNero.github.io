@@ -7,7 +7,6 @@ export default class DesktopMenu extends React.Component {
     state = {menu: []};
 
     componentDidMount() {
-        console.log(this.props.menuPath);
         fetch(this.props.menuPath)
             .then(response => response.json())
             .then(responseJson => {

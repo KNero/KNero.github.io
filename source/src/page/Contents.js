@@ -3,9 +3,14 @@ import {Link} from "react-router-dom";
 import './Contents.scss';
 
 const MARKDOWN = require('showdown');
+const MARKDOWN_HIGHLIGHT = require("showdown-highlight");
 const MARKDOWN_CONVERTER = new MARKDOWN.Converter({
     tables:true,
-    strikethrough:true
+    strikethrough:true,
+    extensions: [MARKDOWN_HIGHLIGHT({
+        // Whether to add the classes to the <pre> tag
+        pre: true
+    })]
 });
 
 export default class Contents extends React.Component {
