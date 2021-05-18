@@ -83,4 +83,4 @@ Consumer 에서는 commit 을 통해서 메시지 처리를 확정할 수 있는
 ```java
 props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
 ```
-- 받은 순간에 commit 을 전송할 것인가 아니면 완전히 메시지를 처리한 후에 commit 을 전송할 것인가는 고려해야할 요소이다.
+- 받은 순간에 commit 을 전송할 것인가 아니면 완전히 메시지를 처리한 후에 commit 을 전송할 것인가는 고려해야 할 요소이다.
