@@ -4,7 +4,7 @@
 
 파티션이 3으로 설정된 토픽을 사용할 것이며 모든 파티션으로 고르게 요청을 보낼 수 있도록 producer 에는 
 
-```java 
+```java
 props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, RoundRobinPartitioner.class.getName());
 ```
 
