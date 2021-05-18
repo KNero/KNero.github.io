@@ -88,6 +88,10 @@ Consumer 에서는 commit 을 통해서 메시지 처리를 확정할 수 있는
 
 ```java
 props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
+props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 5000);
 ```
 
-- 받은 순간에 commit 을 전송할 것인가 아니면 완전히 메시지를 처리한 후에 commit 을 전송할 것인가는 고려해야 할 요소이다.
+그리고 auto commit 의 경우는 매번 발생하는 것이 아니라 일정 시간이 되면 commit 을 처리하는데 중복 이슈가 있다고 한다.
+(중복이슈는 차후에 정리를 해야겠다.)
+
+[중복이슈 관련 블로그](https://blog.voidmainvoid.net/262)
