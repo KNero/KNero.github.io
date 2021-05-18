@@ -59,7 +59,6 @@ public class KafkaConsumerGroup<K, V> {
 
             while (isRunning) {
                 ConsumerRecords<K, V> records = kafkaConsumer.poll(pollDuration);
-                kafkaConsumer.commitSync(commitDuration);
 
                 if (records.count() > 0) {
                     try {
