@@ -23,6 +23,7 @@ props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, RoundRobinPartitioner.class.g
 그리고 procuder, consumer 의 상태를 보니 정상적으로 데이터를 수신하고 있는 것을 확인할 수 있었다.
 
 Producer
+
 ```
 1922. Record sent with key [136fb5ca-e4b4-4e09-afea-fe8c9282c76c] to partition 0 with offset 640
 1923. Record sent with key [136fb5ca-e4b4-4e09-afea-fe8c9282c76c] to partition 1 with offset 640
@@ -31,6 +32,7 @@ Producer
 ```
 
 Consumer
+
 ```
 1922. kafka-consumer-consumer-group-2-2: message count: 1
 ConsumerRecord(topic = test-topic-2, partition = 2, leaderEpoch = 9, offset = 638, CreateTime = 1621300730945, serialized key size = 36, serialized value size = 53, headers = RecordHeaders(headers = [], isReadOnly = false), key = 136fb5ca-e4b4-4e09-afea-fe8c9282c76c, value = perfect message. 136fb5ca-e4b4-4e09-afea-fe8c9282c76c)
@@ -58,6 +60,7 @@ Exception in thread "kafka-consumer-consumer-group-2-1" org.apache.kafka.common.
 에러로그가 출력됐지만 consumer 는 계속 메시지를 처리했으며 3번 노드를 내렸었기 때문에 모든 리더노드들이 1, 2로 변경된것도 확인했다. (중간에 다시 3번 노드를 실행했다.)
 
 Producer
+
 ```
 2998. Record sent with key [7cace941-a4ba-4e19-862e-81c9c5cf4d92] to partition 2 with offset 4162
 2999. Record sent with key [7cace941-a4ba-4e19-862e-81c9c5cf4d92] to partition 0 with offset 4162
@@ -65,6 +68,7 @@ Producer
 ```
 
 Consumer
+
 ```
 2998. kafka-consumer-consumer-group-2-0: message count: 1
 ConsumerRecord(topic = test-topic-2, partition = 0, leaderEpoch = 20, offset = 4160, CreateTime = 1621302837199, serialized key size = 36, serialized value size = 53, headers = RecordHeaders(headers = [], isReadOnly = false), key = 7cace941-a4ba-4e19-862e-81c9c5cf4d92, value = perfect message. 7cace941-a4ba-4e19-862e-81c9c5cf4d92)
