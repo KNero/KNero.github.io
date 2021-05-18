@@ -1,16 +1,17 @@
 오늘의 테스트는 셧다운 테스트로 producer, consumer 가 kafka 를 사용하고 있는 중에 리더 노드를 포함한 노드 2개가 내려갔을 경우 정상적으로 메시지를 처리하는 것을 확인하는 것이다.
 
-![shutdown1]()
+![shutdown1](/contents/dev/2021/05/18/image/shutdown1.png)
 
 파티션이 3으로 설정된 토픽을 사용할 것이며 모든 파티션으로 고르게 요청을 보낼 수 있도록 
 producer 에는 `props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, RoundRobinPartitioner.class.getName());`를 추가했다.
+
 이제 producer, consumer 를 실행시키고 1, 2 노드를 내려보자.
 
-![shutdown2]()
+![shutdown2](/contents/dev/2021/05/18/image/shutdown2.png)
 
 1, 2 노드가 내려갔다는 경고를 확인할 수 있고
 
-![shutdown3]()
+![shutdown3](/contents/dev/2021/05/18/image/shutdown3.png)
 
 모든 리더노드가 3으로 변경된 것을 확인할 수 있다.
 
@@ -71,13 +72,3 @@ ConsumerRecord(topic = test-topic-2, partition = 0, leaderEpoch = 20, offset = 4
 3000개의 모든 메시지도 정상적으로 처리했다.
 
 **신기했던 건 3개의 파티션중 하나는 1번 노드, 나머지 2개는 2번 노드가 리더노드로 설정돼 있었는데 어느 순간 1, 2, 3으로 고르게 변경돼 있었다.**
-Kafka는 정말 안정적으로 잘 만들어졌다 :) 
-
-
-
-
-
-
-
-
-
