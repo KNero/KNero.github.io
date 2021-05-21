@@ -1,4 +1,6 @@
 [
+  {"sub": "[Kafka] 9.메시지 중복, Commit", "des": "중복, 커밋 사용","path": "/contents/dev/2021/05/20/kafka-commit.md"},
+  {"sub": "[Kafka] 8.Shutdown Test", "des": "정상/강제 종료 테스트","path": "/contents/dev/2021/05/18/kafka-shutdown-test.md"},
   {"sub": "[Kafka] 7.로그파일 접근 에러", "des": "windows another process error","path": "/contents/dev/2021/05/17/kafka-another-process-error.md"},
   {"sub": "[Kafka] 6.Consumer test class 를 사용한 테스트", "des": "consumer builder class","path": "/contents/dev/2021/05/10/consumer-test-1.md"},
   {"sub": "[Kafka] 5.Topic의 메시지를 가져오자", "des": "Topic 메시지 소비, Consumer 사용","path": "/contents/dev/2021/05/07/kafka-consumer-1.md"},

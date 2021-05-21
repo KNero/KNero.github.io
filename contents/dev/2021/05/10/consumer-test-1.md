@@ -59,7 +59,6 @@ public class KafkaConsumerGroup<K, V> {
 
             while (isRunning) {
                 ConsumerRecords<K, V> records = kafkaConsumer.poll(pollDuration);
-                kafkaConsumer.commitSync(commitDuration);
 
                 if (records.count() > 0) {
                     try {
@@ -268,7 +267,7 @@ kafka-consumer-consumer-group-2-0: message count: 1
 
 ![web admin](/contents/dev/2021/05/10/image/test-1.png)
 
-** 지금까지 알게된 비지니스에 맞게 조절해야 하는 요소**
+**지금까지 알게된 비지니스에 맞게 조절해야 하는 요소**
 - consumer group 안에 consumer 개수
 - topic 의 partition 개수
 - producer 의 partition 배분 전략
