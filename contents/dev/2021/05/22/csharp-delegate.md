@@ -153,7 +153,6 @@ Callback Thread: 12
 위에서 짧게 설명했지만 `EndInvoke`는 `BeingInvoke` 의 결과를 통해서 번환값과 예외처리를 도와준다. 즉, `EndInvoke` 를 통해서
 비동기 호출이지만 동기호출과 같은 방법으로 반환값과 예외를 처리할 수 있는 것이다.
 
-```c#
 **예외처리**
 ```c#
 IAsyncResult ar = m.BeginInvoke(2, null, null);
@@ -168,5 +167,4 @@ catch (Exception e)
 {
 	Console.WriteLine(e);
 }
-```
 ```
