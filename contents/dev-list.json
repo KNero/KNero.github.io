@@ -1,4 +1,5 @@
 [
+  {"sub": "[C#] delegate", "des": "delegate 동기, 비동기 호출","path": "/contents/dev/2021/05/22/csharp-delegate.md"},
   {"sub": "[Kafka] 9.메시지 중복, Commit", "des": "중복, 커밋 사용","path": "/contents/dev/2021/05/20/kafka-commit.md"},
   {"sub": "[Kafka] 8.Shutdown Test", "des": "정상/강제 종료 테스트","path": "/contents/dev/2021/05/18/kafka-shutdown-test.md"},
   {"sub": "[Kafka] 7.로그파일 접근 에러", "des": "windows another process error","path": "/contents/dev/2021/05/17/kafka-another-process-error.md"},
