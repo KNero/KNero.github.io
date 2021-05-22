@@ -6,7 +6,7 @@ C# 에는 Delegate 와 Event 가 있다. 처음 둘을 접했을 때는 둘의 �
 
 우선 `delegate`를 만들어 보자
 
-```
+```c#
 namespace Test
 {
     public delegate void TestDelegate(string a);
@@ -24,7 +24,7 @@ namespace Test
 C#에서는 `delegate`를 통해서 method의 참조를 method 의 paramter 로 넘길 수 있는데 이것은 java 의 `lambda(하나의 구현되지 않은 method를 가지고 있는 interface)`와 사용방법이 같다.
 그리고 이제 event를 만들려고 하니 그냥 만들수는 없고 `delegate`를 사용하여만 한다고 한다. 이것으로 `event`는 `delegate`로만 만들어야 한다는 사실을 알았다.
 
-```
+```c#
 namespace Test
 {
     public delegate void TestDelegate(string a);
@@ -44,7 +44,7 @@ namespace Test
 그리고 `delegate`는 `class`와 같은 레벨인 `namespace`에 만들 수 있지만 `event`는 `class`안으로 들어가야 한다.
 테스트를 위해서 `TestDelegate` 메소드를 추가해 보겠다.
 
-```
+```c#
 using System;
 
 namespace Test
@@ -75,7 +75,7 @@ namespace Test
 
 `delegate`의 사용법은 알고 있으니 `event` 를 사용해 보자.
 
-```
+```c#
 using System;
 
 namespace Test
@@ -111,7 +111,7 @@ namespace Test
 
 `add`, `remove` 기능이 있다면 이것을 재정의할 수 있을까?
 
-```
+```c#
 public event TestDelegate TestEvent
 {
 	add
@@ -127,7 +127,7 @@ public event TestDelegate TestEvent
 
 물론 가능하다. 히지만 대입(=)과 호출을 사용할 수 없게 된다.
 
-```
+```c#
 p.TestEvent = TestDelegate1; // compile error
 ...
 p.TestEvent("test"); // compile error
