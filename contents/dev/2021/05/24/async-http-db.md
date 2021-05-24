@@ -106,9 +106,9 @@ static void Main(string[] args)
 
 		var sqlCommand = new SqlCommand(sqlSelect, sqlConnection);
 		var callback = new AsyncCallback(DataAvailable);
-		var ar = sqlCommand.BeginExecuteReader(callback, sqlCommand);
+		var ar = sqlCommand.BeginExecuteReader(callback, sqlCommand); // 비동기 호출
 		
-		ar.AsyncWaitHandle.WaitOne();
+		ar.AsyncWaitHandle.WaitOne(); // 비동기 호출은 background thread 에서 실행되기 때문에 main thread 는 완료를 기다리도록 해준다.
 	}
 }
 
