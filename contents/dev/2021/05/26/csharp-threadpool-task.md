@@ -95,7 +95,7 @@ Task Continued
 Task.WaitAll(t1, t2);
 ```
 
-`Run`을 통한 실행도 있다.
+그리고 실행하는 방법으로 `Run`도 있다.
 ```c#
 Task.Run(() => { Console.WriteLine("Task Run"); }).Wait();
 ```
