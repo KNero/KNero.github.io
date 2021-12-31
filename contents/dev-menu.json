@@ -3,5 +3,6 @@
   {"name": "OS Study", "path": "/dev?f=[OS Study]"},
   {"name": "Kafka", "path": "/dev?f=[Kafka]"},
   {"name": "C#", "path": "/dev?f=[C#]"},
-  {"name": "Java", "path": "/dev?f=[Java]"}
+  {"name": "Java", "path": "/dev?f=[Java]"},
+  {"name": "CodingTest", "path": "/dev?f=[CodingTest]"}
 ]
