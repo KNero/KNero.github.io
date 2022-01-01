@@ -20,13 +20,13 @@ HackerRank 의 Interview Prepaaration Kit 에 있는 Arrays 문제 중 Arrays: L
 
 5개의 숫자배열이고 4번 로테이션키셔야 한다.
 배열은 [1, 2, 3, 4, 5]
-```
+```text
 5 4
 1 2 3 4 5
 ```
 
 결과
-```
+```text
 5 1 2 3 4
 ```
 
@@ -37,7 +37,7 @@ HackerRank 의 Interview Prepaaration Kit 에 있는 Arrays 문제 중 Arrays: L
 
 ## 나의 풀이
 
-```
+```java
 public static List<Integer> rotLeft(List<Integer> a, int d) {
     Integer[] result = new Integer[a.size()];
     
