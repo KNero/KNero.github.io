@@ -31,7 +31,7 @@ HackerRank 의 Interview Prepaaration Kit 에 있는 Arrays 문제 중 Arrays: L
 ```
 
 설명
-```
+```text
 1 2 3 4 5 -> 2 3 4 5 1 -> 3 4 5 1 2 -> 4 5 1 2 3 -> 5 1 2 3 4
 ```
 
