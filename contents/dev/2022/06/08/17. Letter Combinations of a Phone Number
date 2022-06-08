@@ -1,0 +1,49 @@
+휴대전화 키패드의 숫자에 매핑된 알파벳을 사용하여 주어진 숫자로 만들 수 있는 모든 문자열을 찾는 문제인다.
+```
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+```
+
+이런 종류의 문제는 몇번 풀어봐서 크게 어렵지 않게 재귀함수를 사용하여 해결했다.
+
+```java
+class Solution {
+    private static HashMap<Character, String[]> STR_MAP = new HashMap<>();
+    static {
+        STR_MAP.put('2', new String[]{"a", "b", "c"});
+        STR_MAP.put('3', new String[]{"d", "e", "f"});
+        STR_MAP.put('4', new String[]{"g", "h", "i"});
+        STR_MAP.put('5', new String[]{"j", "k", "l"});
+        STR_MAP.put('6', new String[]{"m", "n", "o"});
+        STR_MAP.put('7', new String[]{"p", "q", "r", "s"});
+        STR_MAP.put('8', new String[]{"t", "u", "v"});
+        STR_MAP.put('9', new String[]{"w", "x", "y", "z"});
+    }
+    
+    public List<String> letterCombinations(String digits) {    
+        List<String> result = new ArrayList<>();
+        if (digits.length() == 0) {
+            return result;
+        }
+        
+        findAllString(0, digits, "", result);
+        Í
+        return result;
+    }
+    
+    private void findAllString(int index, String digits, String pre, List<String> result) {
+        String[] str = STR_MAP.get(digits.charAt(index));
+        int maxIndex = digits.length() - 1;
+        
+        for (String s : str) {
+            if (index < maxIndex) {
+                // digits 개수가 될 때까지 문자열을 붙여준다.
+                findAllString(index + 1, digits, pre + s, result);
+            } else {
+                // digits 개수만큼 문자열을 붙였다면 추가해준다.
+                result.add(pre + s);
+            }
+        }
+    }
+}
+```
