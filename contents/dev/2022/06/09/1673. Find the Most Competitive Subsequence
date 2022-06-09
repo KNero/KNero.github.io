@@ -1,0 +1,60 @@
+문제를 간단하게 설명하기 힘들어서 사이트의 내용을 참고하는 것이 좋을 것 같다.
+
+https://leetcode.com/problems/find-the-most-competitive-subsequence/
+
+여러번 시도를 했지만 5000개를 뽑는 테스트 케이스에서 타임아웃이 발생했고 다른 사람의 코드를 참고해서 성공했다.
+
+아래 코드는 내가 마지막으로 실패한 코드이다.
+```java
+class Solution {
+    private static final int MAX_VALUE = (int)Math.pow(10, 9) + 1;
+    
+    public int[] mostCompetitive(int[] nums, int k) {
+        int[] result = new int[k];
+        int min = MAX_VALUE;
+        int minI = 0;
+        int end = nums.length - k;
+        int index = 0;
+        
+        for (int i = 0; i < nums.length; ++i) {
+            if (min > nums[i]) {
+                min = nums[i];
+                minI = i;
+            }
+            
+            if (i == end) {
+                result[index++] = min;
+                end = nums.length - (k - index);
+                min = MAX_VALUE;
+                i = minI;
+            }
+        }
+        
+        return result;
+    }
+}
+```
+
+나름 최대한 간단한 방법으로 풀었다고 생각했지만 i의 위치를 계속 변경하면서 비효율적으로 돌아가서 그런지 타임아웃이 발생했다.
+아래 코드는 다른사람의 코드를 보고 작성해 보았다.
+
+```java
+class Solution {
+    public int[] mostCompetitive(int[] nums, int k) {
+        int end = nums.length - k;
+        int index = -1;
+
+        for (int n : nums) {
+            while (index >= 0 && end > 0 && n < nums[index]) {
+                --index;
+                --end;
+            }
+            
+            nums[++index] = n;
+        }
+        
+        return Arrays.copyOf(nums, k);
+    }
+}
+```
+내가 i를 조절하듯이 while 문을 통해서 위치를 조절하지만 확실히 더 심플하고 빨라보이는 코드였다.
