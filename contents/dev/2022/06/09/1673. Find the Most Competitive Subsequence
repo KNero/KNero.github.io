@@ -1,6 +1,5 @@
 문제를 간단하게 설명하기 힘들어서 사이트의 내용을 참고하는 것이 좋을 것 같다.
-
-https://leetcode.com/problems/find-the-most-competitive-subsequence/
+[LeetCode](https://leetcode.com/problems/find-the-most-competitive-subsequence/)
 
 여러번 시도를 했지만 5000개를 뽑는 테스트 케이스에서 타임아웃이 발생했고 다른 사람의 코드를 참고해서 성공했다.
 
